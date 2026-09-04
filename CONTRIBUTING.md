@@ -1,0 +1,7 @@
+- feature branches only
+- Conventional Commits
+- squash merges
+- tests required for behavior changes
+- regression tests for bugs
+- benchmarks required for performance claims
+- ADR for significant architectural decisions
