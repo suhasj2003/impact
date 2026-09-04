@@ -1,0 +1,73 @@
+name: Bug
+description: Report incorrect or unexpected behavior
+title: "fix: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Describe a reproducible correctness or behavior problem.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Problem
+      description: What is behaving incorrectly?
+      placeholder: Describe the observed problem.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What should happen instead?
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction
+      description: Provide the smallest reliable way to reproduce the issue.
+      placeholder: |
+        1. Configure with ...
+        2. Run ...
+        3. Observe ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Include relevant platform and build information.
+      placeholder: |
+        OS:
+        Architecture:
+        Compiler:
+        Build type:
+        Commit:
+    validations:
+      required: false
+
+  - type: dropdown
+    id: impact
+    attributes:
+      label: Impact
+      options:
+        - Incorrect simulation result
+        - Crash or undefined behavior
+        - Build or tooling failure
+        - Performance regression
+        - Output or I/O issue
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional context
+      description: Logs, suspected cause, related issues, or other useful information.
