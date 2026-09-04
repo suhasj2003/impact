@@ -1,0 +1,72 @@
+name: Performance Investigation
+description: Investigate or improve simulator performance
+title: "perf: "
+labels:
+  - performance
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Performance problem
+      description: What workload, subsystem, or bottleneck is being investigated?
+    validations:
+      required: true
+
+  - type: textarea
+    id: baseline
+    attributes:
+      label: Baseline
+      description: Record the current measurable behavior.
+      placeholder: |
+        Hardware:
+        Compiler:
+        Build:
+        Commit:
+
+        Workload:
+        Particle count:
+        Threads:
+
+        Result:
+    validations:
+      required: true
+
+  - type: textarea
+    id: hypothesis
+    attributes:
+      label: Hypothesis
+      description: What do you believe is causing the bottleneck or what optimization might help?
+    validations:
+      required: false
+
+  - type: textarea
+    id: investigation
+    attributes:
+      label: Investigation plan
+      description: What profiling, experiments, or comparisons should be performed?
+      placeholder: |
+        - Profile ...
+        - Compare ...
+        - Measure ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: success
+    attributes:
+      label: Success criteria
+      description: What evidence would justify accepting the change?
+      placeholder: |
+        - No correctness regression
+        - P95 numerical error remains below ...
+        - Throughput improves by ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: results
+    attributes:
+      label: Results
+      description: Fill this in as the investigation progresses.
+    validations:
+      required: false
