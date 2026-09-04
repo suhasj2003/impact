@@ -27,6 +27,28 @@
                 "CMAKE_BUILD_TYPE": "Release",
                 "CMAKE_EXPORT_COMPILE_COMMANDS": "ON"
             }
+        },
+        {
+            "name": "asan",
+            "displayName": "AddressSanitizer",
+            "description": "Debug build with AddressSanitizer",
+            "inherits": "debug",
+            "binaryDir": "${sourceDir}/build/asan",
+            "cacheVariables": {
+                "CMAKE_CXX_FLAGS": "-fsanitize=address -fno-omit-frame-pointer",
+                "CMAKE_EXE_LINKER_FLAGS": "-fsanitize=address"
+            }
+        },
+        {
+            "name": "ubsan",
+            "displayName": "UndefinedBehaviorSanitizer",
+            "description": "Debug build with UndefinedBehaviorSanitizer",
+            "inherits": "debug",
+            "binaryDir": "${sourceDir}/build/ubsan",
+            "cacheVariables": {
+                "CMAKE_CXX_FLAGS": "-fsanitize=undefined -fno-omit-frame-pointer",
+                "CMAKE_EXE_LINKER_FLAGS": "-fsanitize=undefined"
+            }
         }
     ],
     "buildPresets": [
@@ -37,6 +59,14 @@
         {
             "name": "release",
             "configurePreset": "release"
+        },
+        {
+            "name": "asan",
+            "configurePreset": "asan"
+        },
+        {
+            "name": "ubsan",
+            "configurePreset": "ubsan"
         }
     ]
 }
