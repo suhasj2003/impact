@@ -20,8 +20,6 @@ CheckOptions:
     value:           camelCase
   - key:             readability-identifier-naming.MemberCase
     value:           snake_case
-  - key:             readability-identifier-naming.MemberSuffix
-    value:           _
   - key:             readability-identifier-naming.VariableCase
     value:           snake_case
 ...
