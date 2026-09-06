@@ -22,7 +22,7 @@ set(BUILD_EXAMPLES OFF CACHE INTERNAL "")
 
 FetchContent_Declare(
     raylib
-    GIT_REPOSITORY https://github.com
+    GIT_REPOSITORY https://github.com/raysan5/raylib.git
     GIT_TAG        5.0
 )
 FetchContent_MakeAvailable(raylib)
@@ -35,7 +35,7 @@ set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 
 FetchContent_Declare(
     googletest
-    GIT_REPOSITORY https://github.com
+    GIT_REPOSITORY https://github.com/google/googletest.git
     GIT_TAG        v1.14.0 
 )
 FetchContent_MakeAvailable(googletest)
